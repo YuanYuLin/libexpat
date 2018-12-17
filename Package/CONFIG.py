@@ -85,6 +85,19 @@ def MAIN_INSTALL(args):
     iopc.installBin(args["pkg_name"], ops.path_join(dst_lib_dir, "."), "lib") 
     return False
 
+def MAIN_SDKENV(args):
+    set_global(args)
+
+    cflags = ""
+    cflags += " -I" + ops.path_join(iopc.getSdkPath(), 'usr/include/' + args["pkg_name"])
+    iopc.add_includes(cflags)
+
+    libs = ""
+    libs += " -lexpat"
+    iopc.add_libs(libs)
+
+    return False
+
 def MAIN_CLEAN_BUILD(args):
     set_global(args)
     return False
