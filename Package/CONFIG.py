@@ -49,10 +49,10 @@ def MAIN_EXTRACT(args):
     set_global(args)
 
     ops.mkdir(dst_lib_dir)
-    ops.copyto(ops.path_join(src_lib_dir, "libexpat.so.1.6.2"), dst_lib_dir)
-    ops.ln(dst_lib_dir, "libexpat.so.1.6.2", "libexpat.so.1.6")
-    ops.ln(dst_lib_dir, "libexpat.so.1.6.2", "libexpat.so.1")
-    ops.ln(dst_lib_dir, "libexpat.so.1.6.2", "libexpat.so")
+    ops.copyto(ops.path_join(src_lib_dir, "libexpat.so.1.6.0"), dst_lib_dir)
+    ops.ln(dst_lib_dir, "libexpat.so.1.6.0", "libexpat.so.1.6")
+    ops.ln(dst_lib_dir, "libexpat.so.1.6.0", "libexpat.so.1")
+    ops.ln(dst_lib_dir, "libexpat.so.1.6.0", "libexpat.so")
 
     ops.mkdir(tmp_include_dir)
     ops.copyto(ops.path_join(src_include_dir, 'expat.h'), tmp_include_dir)
